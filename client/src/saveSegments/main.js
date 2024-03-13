@@ -43,9 +43,11 @@ const App = () => {
   };
 
   const AddNewSchema = () => {
-    const updatedArray = [...Added_schema, Add_schema_to_segment];
-    setAdded_schema(updatedArray);
-    set_Add_schema_to_segment("")
+    if(Add_schema_to_segment){
+        const updatedArray = [...Added_schema, Add_schema_to_segment];
+        setAdded_schema(updatedArray);
+        set_Add_schema_to_segment("")
+    }
   }
 
   const removeAddedSchema = (index) => {
